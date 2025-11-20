@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/解决方案项/">
+    <File Path="build-asf.ps1" />
+    <File Path="build.ps1" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Project Path="ArchiSteamFarm/ArchiSteamFarm/ArchiSteamFarm.csproj" />
+  <Project Path="ASFUtils/ASFUtils.csproj" />
+</Solution>
