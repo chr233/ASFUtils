@@ -208,8 +208,12 @@ internal sealed class ASFUtils : IASF, IPlugin, IBotCommand2, IBotCardsFarmerInf
     {
         if (Config.DeleteWhenFarmed && !farmedSomething)
         {
-            Utils.DeleteBot(bot);
-            ASFLogger.LogGenericWarning($"已删除挂完卡的机器人 {bot.BotName}");
+            _ = Task.Run(async () =>
+            {
+                await Task.Delay(3000).ConfigureAwait(false);
+                Utils.DeleteBot(bot);
+                ASFLogger.LogGenericWarning($"已删除挂完卡的机器人 {bot.BotName}");
+            });
         }
 
         return Task.CompletedTask;
