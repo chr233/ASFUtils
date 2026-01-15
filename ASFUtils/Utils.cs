@@ -144,6 +144,11 @@ internal static class Utils
                 {
                     File.Delete(filePath);
                 }
+                filePath += ".new";
+                if (File.Exists(filePath))
+                {
+                    File.Delete(filePath);
+                }
             }
             catch (Exception ex)
             {
